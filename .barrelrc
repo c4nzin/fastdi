@@ -1,0 +1,10 @@
+{
+  "source": "src",
+  "output": "src/index.ts",
+  "extensions": [
+    ".ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

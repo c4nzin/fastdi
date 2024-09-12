@@ -11,6 +11,9 @@ importers:
       '@types/node':
         specifier: ^22.5.4
         version: 22.5.4
+      barrel:
+        specifier: ^0.1.0
+        version: 0.1.0
       microbundle:
         specifier: ^0.15.1
         version: 0.15.1(ts-node@10.9.2(@types/node@22.5.4)(typescript@5.6.2))
@@ -855,6 +858,10 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
+  barrel@0.1.0:
+    resolution: {integrity: sha512-M1wBM3KjoOYEpCLFIRXmeV91yP89fwdrgtQKt0GeIMgtClDtcDvmDZ1yvKb9odG8tlbsZDzSr7K4bUIjfzDejw==}
+    deprecated: please use 'cassette' instead of 'barrel'
+
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
 
@@ -1131,6 +1138,10 @@ packages:
 
   eventemitter3@4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
+
+  events@1.1.1:
+    resolution: {integrity: sha512-kEcvvCBByWXGnZy6JUlgAp2gBIUjfCAV6P6TgT1/aaQKcmuAEC4OZTV1I4EWQLz2gxZw76atuVyvHhTxvi0Flw==}
+    engines: {node: '>=0.4.x'}
 
   figures@1.7.0:
     resolution: {integrity: sha512-UxKlfCRuCBxSXU4C6t9scbDyWZ4VlaFFdojKtzJuSkuOBQ5CNFum+zZXFwHjo+CxBC1t6zlYPgHIgFjL8ggoEQ==}
@@ -3212,6 +3223,10 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
+  barrel@0.1.0:
+    dependencies:
+      events: 1.1.1
+
   boolbase@1.0.0: {}
 
   brace-expansion@1.1.11:
@@ -3557,6 +3572,8 @@ snapshots:
   esutils@2.0.3: {}
 
   eventemitter3@4.0.7: {}
+
+  events@1.1.1: {}
 
   figures@1.7.0:
     dependencies:
