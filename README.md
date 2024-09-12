@@ -1,5 +1,12 @@
 ## FastDI a Dependency Injection Library
 
+## Installation
+https://www.npmjs.com/package/@canmertinyo/fast-di
+
+```bash
+npm i @canmertinyo/fast-di
+```
+
 ## Features
 
 - **Decorator-Based Injection**: Use `@Injectable` to make classes injectable.
