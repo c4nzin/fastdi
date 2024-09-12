@@ -19,8 +19,7 @@ Container and Injectable
 The Container class is the core of this library, managing instances and dependencies of injectable classes. With @Injectable decorator marks a class as injectable.
 ## Examples
 ```typescript
-import { Injectable } from "./decorators/injectable";
-import { Container } from "./container/container";
+import {Container, Injectable} from "@canmertinyo/fast-di";
 
 @Injectable()
 class ExampleService {
@@ -42,8 +41,8 @@ Singleton: A single instance is created and shared throughout the application.
 Transient: A new instance is created every time
 
 ```typescript
-import { Injectable } from "./decorators/injectable";
-import { Lifecycle } from "./constants/lifecycle";
+import {Lifecycle, Injectable} from "@canmertinyo/fast-di";
+
 
 @Injectable({ lifecycle: Lifecycle.Transient })
 class TransientService {
@@ -60,7 +59,7 @@ In this example, TransientService is marked with a transient lifecycle, meaning 
 You can define and load modules using the @Module decorator. This allows for organizing services and dependencies in a modular way...
 
 ```typescript
-import { Module } from "./decorators/module";
+import { Module} from "@canmertinyo/fast-di";
 import { ExampleService } from "./services/example.service";
 
 @Module({
@@ -77,7 +76,7 @@ Container.loadModule(ExampleModule);
 
 ## More Realworld Examples
 ```typescript
-import { Injectable } from "./decorators/injectable";
+import { Injectable} from "@canmertinyo/fast-di";
 import { DatabaseService } from "./services/database.service";
 import { LoggerService } from "./services/logger.service";
 
@@ -97,7 +96,7 @@ class UserService {
 
 ## AuthService example
 ```typescript
-import { Injectable } from "./decorators/injectable";
+import {Injectable} from "@canmertinyo/fast-di";
 
 @Injectable()
 class AuthService {
