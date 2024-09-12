@@ -1,7 +1,5 @@
 ## FastDI a Dependency Injection Library
 
-This project implements a modular and flexible Dependency Injection (DI) framework using TypeScript and Node.js. It features decorator-based injectability, lifecycle management, and dynamic module loading.
-
 ## Features
 
 - **Decorator-Based Injection**: Use `@Injectable` to make classes injectable.
