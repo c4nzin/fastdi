@@ -1,12 +1,13 @@
+import { INJECTABLE, LIFE_CYCLE } from "../constants";
 import { LifeCycle } from "../enums/life-cycle.enum";
 
 export function Injectable(
   options: { lifeCycle?: LifeCycle } = {}
 ): ClassDecorator {
   return (target: any) => {
-    Reflect.defineMetadata("injectable", true, target);
+    Reflect.defineMetadata(INJECTABLE, true, target);
     Reflect.defineMetadata(
-      "lifecycle",
+      LIFE_CYCLE,
       options.lifeCycle || LifeCycle.Singleton,
       target
     );

@@ -1,3 +1,4 @@
+import { LIFE_CYCLE, PARAM_TYPES, PROVIDERS } from "../constants";
 import { LifeCycle } from "../enums/life-cycle.enum";
 
 export class Container {
@@ -6,7 +7,7 @@ export class Container {
 
   public static get<T>(token: new (...args: any[]) => T): T {
     const lifeCycle =
-      Reflect.getMetadata("lifecycle", token) || LifeCycle.Singleton;
+      Reflect.getMetadata(LIFE_CYCLE, token) || LifeCycle.Singleton;
 
     if (lifeCycle === LifeCycle.Transient) {
       const dependencies =
@@ -18,8 +19,7 @@ export class Container {
     }
 
     if (!this.instances.has(token)) {
-      const dependencies =
-        Reflect.getMetadata("design:paramtypes", token) || [];
+      const dependencies = Reflect.getMetadata(PARAM_TYPES, token) || [];
 
       const injections = dependencies.map((dep: any) => Container.get(dep));
 
@@ -33,7 +33,7 @@ export class Container {
 
   public static loadModules(module: any) {
     if (this.instances.has(module)) {
-      const providers = Reflect.getMetadata("providers", module) || [];
+      const providers = Reflect.getMetadata(PROVIDERS, module) || [];
 
       providers.forEach((provider: any) => {
         Container.get(provider);
