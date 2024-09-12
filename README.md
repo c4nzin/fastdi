@@ -1,6 +1,11 @@
 ## FastDI a Dependency Injection Library
 
-This project implements a modular and flexible Dependency Injection (DI) framework using TypeScript and Node.js. It features decorator-based injectability, lifecycle management, and dynamic module loading.
+## Installation
+https://www.npmjs.com/package/@canmertinyo/fast-di
+
+```bash
+npm i @canmertinyo/fast-di
+```
 
 ## Features
 
