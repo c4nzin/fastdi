@@ -1,22 +1,39 @@
 {
-  "name": "fastdi",
+  "name": "@canmertinyo/fast-di",
   "version": "1.0.0",
-  "description": "A LIGHTWEIGHT DEPENDENCY INJECTION LIB",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon dist/src/index.js"
+  "source": "src/index.ts",
+  "module": "./dist/index.esm.js",
+  "unpkg": "./dist/index.umd.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.esm.js"
   },
-  "keywords": [],
+  "description": "A LIGHTWEIGHT DEPENDENCY INJECTION LIB",
+  "main": "./dist/index.cjs",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "keywords": [
+    "di",
+    "depedency injector",
+    "di library",
+    "decorator di library",
+    "lightweight di library for typescript"
+  ],
   "author": "CANMERTINYO",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^22.5.4",
+    "microbundle": "^0.15.1",
     "reflect-metadata": "^0.2.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   },
-  "dependencies": {
-    "nodemon": "^3.1.4"
-  }
+  "dependencies": {}
 }
