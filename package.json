@@ -1,0 +1,22 @@
+{
+  "name": "fastdi",
+  "version": "1.0.0",
+  "description": "A LIGHTWEIGHT DEPENDENCY INJECTION LIB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon dist/src/index.js"
+  },
+  "keywords": [],
+  "author": "CANMERTINYO",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
