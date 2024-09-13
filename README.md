@@ -1,6 +1,6 @@
 ## FastDI a Dependency Injection Library
 
-Side note : Inspired by Nest.js structure
+Inspired by Nest.js structure
 
 ## Installation
 https://www.npmjs.com/package/@canmertinyo/fast-di
