@@ -10,8 +10,7 @@ export class Container {
       Reflect.getMetadata(LIFE_CYCLE, token) || LifeCycle.Singleton;
 
     if (lifeCycle === LifeCycle.Transient) {
-      const dependencies =
-        Reflect.getMetadata("design:paramtypes", token) || [];
+      const dependencies = Reflect.getMetadata(PARAM_TYPES, token) || [];
 
       const injections = dependencies.map((dep: any) => Container.get(dep));
 
