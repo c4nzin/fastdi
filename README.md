@@ -89,7 +89,7 @@ class UserService {
     private loggerService: LoggerService
   ) {}
 
-  public getUser(userName:string) {
+  public getUser(userName:string):string {
     this.loggerService.log("Fetching user...");
     return this.databaseService.query() + " User: " + userName;
   }
@@ -102,7 +102,7 @@ import {Injectable} from "@canmertinyo/fast-di";
 
 @Injectable()
 class AuthService {
-  authenticate() {
+  public authenticate():string {
     return "Authenticated!";
   }
 }
