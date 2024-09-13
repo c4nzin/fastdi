@@ -17,7 +17,8 @@
   "main": "./dist/index.cjs",
   "scripts": {
     "build": "microbundle",
-    "dev": "microbundle watch"
+    "dev": "microbundle watch",
+    "test": "jest"
   },
   "keywords": [
     "di",
@@ -29,10 +30,13 @@
   "author": "CANMERTINYO",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.5.13",
     "@types/node": "^22.5.4",
     "barrel": "^0.1.0",
+    "jest": "^29.7.0",
     "microbundle": "^0.15.1",
     "reflect-metadata": "^0.2.2",
+    "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   }
