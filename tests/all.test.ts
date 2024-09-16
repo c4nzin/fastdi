@@ -3,6 +3,7 @@ import { Injectable } from "../src/decorators/injectable";
 import { Container } from "../src/containers/container";
 import { LifeCycle } from "../src/enums/life-cycle.enum";
 import { Module } from "../src/decorators/module";
+import { NotFoundException } from "../src/exceptions/not-found.exception";
 
 //Singleton use case
 @Injectable({ lifeCycle: LifeCycle.Singleton })
@@ -22,7 +23,7 @@ class UserService {
 }
 
 //Transient use case
-@Injectable()
+@Injectable({ lifeCycle: LifeCycle.Transient })
 class DatabaseService {
   public dbName(): string {
     return "Example Db.";
@@ -37,6 +38,8 @@ class ConfigService {
     return this.databaseService.dbName();
   }
 }
+
+class BadService {}
 
 @Module({ providers: [ConfigService] })
 class ExampleModule {}
@@ -69,4 +72,11 @@ describe("Coverage tests", () => {
     expect(instance).toBeDefined();
     expect(instance.connectDatabase()).toBe("Example Db.");
   });
+
+  //need to fix
+  // it("Should throw NotFoundException", () => {
+  //   expect(() => {
+  //     Container.get(BadService);
+  //   }).toThrow(new NotFoundException("Not found in container."));
+  // });
 });

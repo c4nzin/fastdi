@@ -10,6 +10,7 @@ export class Container {
 
   public static get<T = any>(token: Constructible): T {
     //Getting lifecycle metadata if its provided the actual value will be handling as Transient
+
     const lifeCycle =
       Reflect.getMetadata(LIFE_CYCLE, token) || LifeCycle.Singleton;
 
@@ -39,7 +40,7 @@ export class Container {
       this.instances.set(token, instance);
     }
 
-    const instance = this.instances.get(token);
+    const instance: Constructible | undefined = this.instances.get(token);
 
     if (!instance) {
       throw new NotFoundException(
@@ -62,5 +63,10 @@ export class Container {
 
       this.modules.add(module);
     }
+  }
+
+  public static clear() {
+    this.instances.clear();
+    this.modules.clear();
   }
 }
