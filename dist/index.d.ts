@@ -4,3 +4,8 @@ export * from "./containers/container";
 export * from "./decorators/injectable";
 export * from "./decorators/module";
 export * from "./enums/life-cycle.enum";
+export * from "./interfaces/metadata-options.interface";
+export * from "./types/constructible";
+export * from "./interfaces/instances.interface";
+export * from "./exceptions/base.exception";
+export * from "./exceptions/not-found.exception";

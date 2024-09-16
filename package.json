@@ -1,6 +1,6 @@
 {
   "name": "@canmertinyo/fast-di",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "source": "src/index.ts",
   "module": "./dist/index.esm.js",
   "unpkg": "./dist/index.umd.js",
